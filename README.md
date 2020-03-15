@@ -12,7 +12,7 @@ recebe o valor da ultima vez que foi executado)
 </p>
 
 <p>
-//<strong>map</strong> = executa uma função para todos do array , e modifica(ele cria um novo array) o  array original , ele tbm pode receber três parâmetros (item = item que está sendo alterado atualmente | index = posição no array | array = proprio array que esta sendo alterado)
+//<strong>map</strong> = executa uma função para todos do array , e modifica o array original (ele cria um novo array), ele tbm pode receber três parâmetros (item = item que está sendo alterado atualmente | index = posição no array | array = proprio array que esta sendo alterado)
 </p>
 
 <br>
