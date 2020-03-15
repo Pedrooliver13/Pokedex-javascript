@@ -7,9 +7,9 @@ const geratePokemonPromise = () =>
   Array(150)
     .fill()
     .map((_, index) =>
-      fetch(getPokemonUrl(index + 1)).then(results => results.json())// é uma promise e passamos o results como json(para passar como corpo de um arquivo json)
+      fetch(getPokemonUrl(index + 1)).then(results => results.json())
     );
-
+// é uma promise e passamos o results como json(para passar como corpo de um arquivo json)
 // pegando info da url fetch ele retorna uma promise
 const gerateHTML = pokemons => pokemons.reduce((accumulator, { name, types, id }) => {
   const elementsTypes = types.map(typeInfo => typeInfo.type.name);//pegando o tipo do pokemon
@@ -35,7 +35,8 @@ const insertPokemonInThePage = pokemons => {
 //E EXECUTAMOS A promise *lembrando que esse pokemons(dos parametros) está vindo do promisse.all(que está recebendo o geratePromise)
 Promise.all(pokemonPromise)
   .then(gerateHTML)
-  .then(insertPokemonInThePage);// pegamos ele (dentro dele ta vindo as infos do pokemons) então 'só' falta colocar ele no html
+  .then(insertPokemonInThePage);
+// pegamos ele (dentro dele ta vindo as infos do pokemons) então 'só' falta colocar ele no html
 
 
 
