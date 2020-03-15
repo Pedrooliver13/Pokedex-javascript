@@ -1,17 +1,16 @@
 const getPokemonUrl = id => `https://pokeapi.co/api/v2/pokemon/${id}`; // Usando o id
 
 //pegando o id o nome e o types(se é eletrico ,fogo etc)
-// como precisamos do type,fizemos um array de como o map. que vai executar para cada um dos items essa função que pega o name ( lembrando que o map está retornando um array de string ) e usa o separador join
+// o map. que vai executar para cada um dos items dessa função ,que pega o name ( lembrando que o map está retornando um array de string ) e usa o separador join
+
 const geratePokemonPromise = () =>
   Array(150)
     .fill()
     .map((_, index) =>
-      fetch(getPokemonUrl(index + 1)).then(results => results.json())
+      fetch(getPokemonUrl(index + 1)).then(results => results.json())// é uma promise e passamos o results como json(para passar como corpo de um arquivo json)
     );
 
 // pegando info da url fetch ele retorna uma promise
-// é uma promise e passamos o results como json(para passar como corpo de um arquivo json)
-// pegamos ele (dentro dele ta vindo as infos do pokemons) então 'só' falta colocar ele no html
 const gerateHTML = pokemons => pokemons.reduce((accumulator, { name, types, id }) => {
   const elementsTypes = types.map(typeInfo => typeInfo.type.name);//pegando o tipo do pokemon
 
@@ -33,9 +32,10 @@ const insertPokemonInThePage = pokemons => {
   ul.innerHTML = pokemons;
 };
 
-//E EXECUTAMOS A promise *lembrando que esse pokemons(dos parametros) está vindo do promisse.all
+//E EXECUTAMOS A promise *lembrando que esse pokemons(dos parametros) está vindo do promisse.all(que está recebendo o geratePromise)
 Promise.all(pokemonPromise)
   .then(gerateHTML)
+// pegamos ele (dentro dele ta vindo as infos do pokemons) então 'só' falta colocar ele no html
   .then(insertPokemonInThePage);
 
 
