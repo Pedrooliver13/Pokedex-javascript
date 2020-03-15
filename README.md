@@ -1,7 +1,8 @@
 # Pokedex-javascript
 Pokedex, que apresenta os 150 pokemons com Javascript puro
-<p>
+
 //Ferramentas javascript usadas
+<p>
 //<strong>fetch</strong> = pega as infos de outro lugar ex: url e retorna em uma promise<br>
 </p>
 <p>
