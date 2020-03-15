@@ -35,8 +35,7 @@ const insertPokemonInThePage = pokemons => {
 //E EXECUTAMOS A promise *lembrando que esse pokemons(dos parametros) está vindo do promisse.all(que está recebendo o geratePromise)
 Promise.all(pokemonPromise)
   .then(gerateHTML)
-// pegamos ele (dentro dele ta vindo as infos do pokemons) então 'só' falta colocar ele no html
-  .then(insertPokemonInThePage);
+  .then(insertPokemonInThePage);// pegamos ele (dentro dele ta vindo as infos do pokemons) então 'só' falta colocar ele no html
 
 
 
