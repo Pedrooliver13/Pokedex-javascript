@@ -1,7 +1,12 @@
-# Pokedex-javascript
-Pokedex, que apresenta os 150 pokemons com Javascript puro
+<h1 align="center">
+  <img width="25%" src="https://i.dlpng.com/static/png/6353425_preview.png">
+</h1>
 
-//Ferramentas javascript usadas
+ <blockquote align="center">Pokedex, que apresenta os 150 pokemons com Javascript puro</blockquote>
+
+<p>Ferramentas Javascript Usadas</p>
+
+
 <p>
 //<strong>fetch</strong> = pega as informações de outro lugar(no caso do exercício uma URL) e retorna um promise
 </p>
